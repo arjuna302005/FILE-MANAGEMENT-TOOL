@@ -15,13 +15,13 @@ MENTOR -NEELA SANTHOSH KUMAR
 📌 Overview
 
 
-This C++ application is a console-based Employee Record System that demonstrates the basics of file handling using fstream. It allows users to:
+This C++ application is a console-based Book Record System that demonstrates the basics of file handling using fstream. It allows users to:
 
-📝 Write employee data to a binary file.
+📝 Write Book data to a binary file.
 
 ➕ Append new records.
 
-📖 Read and display all saved employee records.
+📖 Read and display all saved Book records.
 
 It uses Object-Oriented Programming (OOP) principles with class inheritance and encapsulation to manage employee data.
 
@@ -50,25 +50,25 @@ By studying this program, you’ll learn:
 
 
 1️⃣ Class Structure
-🔹 Employee (Base class)
+🔹 Book (Base class)
 Holds:
 
-eid – Employee ID
+bid – Book ID
 
-name – Employee Name
+name – Book Name
 
-salary – Employee Salary
+price – Book Price
 
 Contains:
 
 menu() – The main interface function.
 
-🔸 Employeeinfo (Derived from Employee)
+🔸 Bookinfo (Derived from Book)
 Contains:
 
-getinfo() – Accepts employee data from user.
+getinfo() – Accepts Book data from user.
 
-putinfo() – Displays employee data in formatted output.
+putinfo() – Displays Book data in formatted output.
 
 writedata() – Writes new data to file (overwrites file).
 
@@ -80,7 +80,7 @@ readdata() – Reads and displays all records from file.
 
 
 The program uses the file:
-📂 Employee.txt – binary file that stores serialized data.
+📂 Book.txt – binary file that stores serialized data.
 
 Modes:
 
@@ -90,7 +90,7 @@ ios::app | ios::binary → Append in binary.
 
 ios::in | ios::binary → Read in binary.
 
-Binary Mode ensures structured data storage as memory image (write((char*)&emp, sizeof(emp))).
+Binary Mode ensures structured data storage as memory image (write((char*)&bk, sizeof(bk))).
 
 3️⃣ The Menu 🧭
 
@@ -112,7 +112,7 @@ User selects an option, and control switches to the appropriate function.
 
 Opens file in write mode (ios::out) – old content is erased.
 
-Collects one employee record using getinfo().
+Collects one book record using getinfo().
 
 Serializes the object and stores it using file.write(...).
 
@@ -127,7 +127,7 @@ Opens file in append mode (ios::app).
 
 Allows multiple entries using a while(ch == 'y') loop.
 
-Prompts user if they want to continue entering more employees.
+Prompts user if they want to continue entering more book.
 
 
 
